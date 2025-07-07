@@ -13,7 +13,6 @@ const UA =
 const baseHeaders = {
   Accept: "*/*",
   "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8",
-  Referer: "https://www.v2ex.com/",
   "User-Agent": UA,
 };
 
