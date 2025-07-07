@@ -53,7 +53,8 @@ function request(opts) {
     }
 
     if (html.includes("每日登录奖励已领取")) {
-      $.msg($.name, "已签到 🎉", "今日已领取过奖励");
+      const phrase = html.match(/已连续登录\s*(\d+)\s*天/);
+      $.msg($.name, "已签到 🎉", `${phrase[0]?phrase[0]:"今日已领取过奖励"}`);
       return;
     }
 
