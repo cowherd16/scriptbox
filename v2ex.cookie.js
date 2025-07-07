@@ -12,7 +12,7 @@ if (typeof $request !== "undefined") {
 
 function captureCookie() {
   // 已全转成小写，取一次即可
-  const cookie = $request.headers.cookie ||  $request.headers.Cookie || "";
+  const cookie = $request.headers.cookie || "";
   if (!cookie) {
     $.log("⚠️ 此请求未携带 Cookie，跳过");
     return;
