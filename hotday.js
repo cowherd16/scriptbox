@@ -96,12 +96,12 @@ const url = `https://api-hot.imsyy.top/${platformValue}?cache=false`;
 // 主流程
 (async () => {
   try {
-    $.log(`🔔 开始获取${platform}热榜`);
+    $.log(`🚀  开始获取${platform}热榜`);
     const { data: result } = await request({
       url,
       headers: baseHeaders,
     });
-
+    $.log(`📊  获取${platform}热榜成功`, result);
     if (result.data && result.data.length > 0) {
       let notificationContent = '';
       for (let i = 0; i < result.data.length && i < count; i++) {
