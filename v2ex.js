@@ -14,12 +14,11 @@ if (!cookieVal) {
 }
 
 const UA =
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
-  "(KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36";
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36";
 
 const baseHeaders = {
   Accept: "*/*",
-  "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8",
+  "Accept-Language": "en-US,en;q=0.9",
   Referer: "https://www.v2ex.com/",
   "User-Agent": UA,
   Cookie: cookieVal,
