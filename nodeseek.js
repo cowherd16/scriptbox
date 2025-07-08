@@ -13,17 +13,19 @@ if (!cookieVal) {
   $.done();
 }
 
+const UA =
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) "Version/16.6 Mobile/15E148 Safari/604.1';
+
 const baseHeaders = {
-   accept: "*/*",
-  "sec-fetch-site": "same-origin",
-  "accept-encoding": "gzip, deflate, br",
-  "accept-language": "en-US,en;q=0.9",
-  "sec-fetch-mode": "cors",
-  origin: "https://www.nodeseek.com",
-  "content-length": 0,
-  "user-agent":
-    'Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) "Version/16.6 Mobile/15E148 Safari/604.1',
-  referer: "https://www.nodeseek.com/board",
+  Accept: "*/*",
+  "Sec-Fetch-Site": "same-origin",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8",
+  "Sec-Fetch-Mode": "cors",
+  Origin: "https://www.nodeseek.com",
+  "Content-Length": 0,
+  "User-Agent": UA,
+  Referer: "https://www.nodeseek.com/board",
   Cookie: cookieVal,
 };
 
