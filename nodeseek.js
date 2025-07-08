@@ -61,8 +61,8 @@ const random = params.random || "false";
       headers: baseHeaders,
       alpn: "h2", //开启http2
     });
-    const resp = JSON.parse(result);
     $.log(`签到结果: ${result}`);
+    const resp = JSON.parse(result);
     if (/鸡腿/.test(resp.message)) {
       $.msg($.name, "签到成功 🎉", `${resp.message}`);
     } else if (/已完成签到/.test(resp.message)) {
