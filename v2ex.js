@@ -70,7 +70,8 @@ function request(opts) {
     });
 
     if (/登录奖励已领取|恭喜/.test(result)) {
-      $.msg($.name, "签到成功 🎉", "");
+      const phrase = result.match(/已连续登录\s*(\d+)\s*天/);
+      $.msg($.name, "签到成功 🎉", `${phrase[0]?phrase[0]:"今日已领取过奖励"}`);
     } else {
       throw new Error("签到接口返回异常，需检查日志");
     }
