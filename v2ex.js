@@ -46,6 +46,7 @@ function request(opts) {
     const { resp, data: html } = await request({
       url: "https://www.v2ex.com/mission/daily",
       headers: baseHeaders,
+      alpn: "h2", //开启http2
     });
 
     if (resp.statusCode === 302 || html.includes("注册")) {
