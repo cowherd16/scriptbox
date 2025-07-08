@@ -58,6 +58,7 @@ const random = params.random || "false";
     $.log("🔔 开始 NodeSeek 签到");
     const { data: result } = await request({
       url: `https://www.nodeseek.com/api/attendance?random=${random}`,
+      method: 'post',
       headers: baseHeaders,
       alpn: "h2", //开启http2
     });
